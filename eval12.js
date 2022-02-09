@@ -13,69 +13,100 @@
 // - Proposez à l’utilisateur de recommencer \n\n
 
 
+var commencer = true;
+
+var choixDeLoperation = choix();
+
+while(commencer == true){
+    // console.log(choix);
+    // console.log(typeof choix);
+    
+    choixDeLoperation = +choixDeLoperation;
+
+    if (choixDeLoperation ==1 || choixDeLoperation ==2 || choixDeLoperation ==3 || choixDeLoperation ==4) {
+        switch (choixDeLoperation){
+            case 1:
+                alert(
+                    "l'addition de vos deux nombre vaut:" + addition(choixNombre(),choixNombreDeux())
+                );
+                commencer = confirm("voulez vous continuer ?");
+                break;
+            case 2:
+                alert(
+                    "la soustraction de " + choixNombreDeux() + "du " + choixNombre() + "est egale à :" + soustraction(choixNombre(),choixNombreDeux())    
+                );
+                commencer = confirm("voulez vous continuer ?");
+                break;
+            case 3:
+                alert(
+                    "la multiplication du " + choixNombre() + "par " + choixNombreDeux() + "est égale à " + multiplication(choixNombre(),choixNombreDeux())
+                );
+                commencer = confirm("voulez vous continuer ?");
+                break;
+            case 4:
+                alert(
+                    "la division du "+ choixNombre() + "par " + choixNombreDeux() + "est égale à " + division(choixNombre(),choixNombreDeux())
+                );
+                commencer = confirm("voulez vous continuer ?");
+                break;
+        }
+        
+    }
+   
+}
+
+// console.log(choice_nbr1);
+// console.log(choice_nbr2);
+// console.log(typeof choice_nbr1);
+// console.log(typeof choice_nbr2);
 
 function choix() {
     var choice = prompt(
-        "1 - addition \n 2 - soustraction \n 3 - multiplication \n 4 - division"
-    );
-}
-choix();
-var operation = choix();
-console.log(choix);
-console.log(typeof choix);
-choix = +choix;
-var choice_nbr1 = prompt("entrez un nombre");
-var choice_nbr2 = prompt("entrez un nombre");
-console.log(choice_nbr1);
-console.log(choice_nbr2);
-choice_nbr1 = parseInt(choice_nbr1);
-choice_nbr2 = parseInt(choice_nbr2);
-console.log(typeof choice_nbr1);
-console.log(typeof choice_nbr2);
+        "Faite votre choix \n 1 - addition \n 2 - soustraction \n 3 - multiplication \n 4 - division \n \n"
+        );
+    if (choice == 1 || choice == 2 || choice == 3 || choice == 4){
+    return choice;
+    }
 
-
-
-function addition(choice_nbr1, choice_nbr2){
-    result = sum(choice_nbr1, choice_nbr2);
-    return paresInt(result);
-}
-function soustraction(choice_nbr1, choice_nbr2){
-    result = choice_nbr1 -= choice_nbr2;
-    return paresInt(result);
-}
-function multiplication(choice_nbr1, choice_nbr2){
-    result = choice_nbr1 *= choice_nbr2;
-    return paresInt(result);
-}
-function division(choice_nbr1, choice_nbr2){
-    result = choice_nbr1 /= choice_nbr2;
-    return paresInt(result);
-}
-
-if (choix ===1 || choix ==2 || choix ===3 || choix ===4) {
-    switch (choix){
-        case 1:
-            alert(
-                "l'addition de vos deux nombre vaut:" + addition
-            );
-            break;
-        case 2:
-            alert("la soustraction de "+ choice_nbr2+ "du "+ choice_nbr1 + "est egale à :" + soustraction    
-            );
-            break;
-        case 3:
-            alert("la multiplication du "+ choice_nbr1 + "par "+ choice_nbr2+"est égale à " + multiplication
-            );
-            break;
-        case 4:
-            alert("la division du "+ choice_nbr1 + "par "+ choice_nbr2+"est égale à " + division
-            );
-            break;
+    else if (choice == null){
+        alert("On a bien cliqué sur annuler");
+        commencer = false;
+    }
+    else {
+        alert("Le résultat isNaN");
+        return choix();
     }
 }
-else{
-    throw new Error("ceci n'est pas le bon choix:");
-    }
+
+function choixNombre(){
+    var choice_nbr1 = prompt("entrez un 1er nombre :");
+    return choice_nbr1 = parseInt(choice_nbr1);
+
+}
+function choixNombreDeux(){
+    var choice_nbr2 = prompt("entrez un 2em nombre :");
+    return choice_nbr2 = parseInt(choice_nbr2);
+
+}
+function addition(a,b){
+    result =(a + b);
+    return result;
+}
+function soustraction(a,b){
+    result = (a - b);
+    return result;
+}
+function multiplication(a,b){
+    result =(a * b);
+    return result;
+}
+function division(a, b){
+    result = (a / b);
+    return result;
+}
+
+
+
 
 
 
