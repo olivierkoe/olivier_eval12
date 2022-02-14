@@ -65,13 +65,17 @@ let paragraphSelector2 = document.querySelector(".paragraphe2");
 
 var randomCitation =
   arrayOfQuotes[Math.floor(Math.random() * arrayOfQuotes.length)];
+let swap = 0;
 
 butonCitation.addEventListener("click", displayMessage);
 
 function displayMessage() {
-  paragraphSelector1.textContent = "citation :" + randomCitation[0];
-  paragraphSelector2.textContent = "de l'auteur : " + randomCitation[1];
+  do {
+    randomCitation =
+      arrayOfQuotes[Math.floor(Math.random() * arrayOfQuotes.length)];
+  } while (swap === randomCitation);
+  paragraphSelector1.textContent = randomCitation[0];
+  paragraphSelector2.textContent = randomCitation[1];
 
-  randomCitation =
-    arrayOfQuotes[Math.floor(Math.random() * arrayOfQuotes.length)];
+  swap = randomCitation;
 }

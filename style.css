@@ -3,18 +3,17 @@
 html,
 body {
   height: 100%;
-  width: 80%;
+  width: 100%;
   font-size: 16px;
 }
 
 .text-shadow {
-  text-shadow: #c0392b 3px 1px 5px;
+  text-shadow: yellow 5px 5px 10px;
 }
 
 body {
   position: relative;
-  margin: 0;
-  background-color: #2e4c6d;
+  background: linear-gradient(to right bottom, orange, red);
   color: white;
   font-family: "Zen Kurenaido", sans-serif;
 }
@@ -22,21 +21,23 @@ body {
 main {
   display: flex;
   text-align: center;
-  padding-left: 50%;
   flex-direction: column;
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 5em;
+  color: blue;
 }
 
 p {
   font-family: "Satisfy", cursive;
   color: blue;
   background: lightblue;
+  width: 50%;
   height: 100px;
   margin-top: 5%;
-  padding-top: 10%;
+  padding-top: 1%;
+  margin-left: 25%;
   border: dashed;
   border-color: aliceblue;
   text-align: center;
@@ -45,10 +46,7 @@ p {
   font-family: "Satisfy", cursive;
   background-color: rgb(45, 31, 124);
   color: yellow;
-  margin-left: 30%;
+  margin-left: 45%;
   height: 50px;
   width: 200px;
-}
-.count {
-  font-size: 150px;
 }
