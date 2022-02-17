@@ -8,7 +8,7 @@ body {
 }
 
 .text-shadow {
-  text-shadow: yellow 5px 5px 10px;
+  text-shadow: rgb(206, 81, 223) 5px 5px 10px;
 }
 
 body {
@@ -28,7 +28,7 @@ main {
 
 h1 {
   font-size: 2em;
-  color: blue;
+  color: rgb(234, 238, 14);
 }
 .bigbox {
   background-color: rgba(117, 190, 218, 0.5);
@@ -54,7 +54,7 @@ h1 {
 .paragraphe2 {
   font-family: "Satisfy", cursive;
   color: white;
-  background: pink;
+  background-color: rgba(243, 201, 245, 0.5);
   width: 50%;
   height: 100px;
   margin-top: 5%;
@@ -66,9 +66,9 @@ h1 {
 }
 .bouton1 {
   font-family: "Satisfy", cursive;
-  background-color: rgba(117, 190, 218, 0.25);
-  background-color: lightpink;
-  color: yellow;
+  background-color: rgba(236, 241, 245, 0.75);
+  font-size: large;
+  color: lightpink;
   height: 50px;
   width: 200px;
 }

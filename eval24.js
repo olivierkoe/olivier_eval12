@@ -31,36 +31,43 @@ var tentative = 1;
 butondemarer.addEventListener("click", displayMessage);
 
 function displayMessage (){ 
+    if (paragraphSelector1.value > 0 || paragraphSelector1.value < 1000 || isNaN()){
+        paragraphSelector2.textContent = "Entrez un chiffre entre 0 et 1000";
+    }
+    else{
+        if (paragraphSelector1.value == chiffreAleatoir){
+            if (tentative == 1){
+                paragraphSelector2.textContent = choiceNumber[0] + "C'etais votre "+ tentative + " ère tentative";
+                tentative = tentative + 1;
+            }
+            else{
+                paragraphSelector2.textContent = choiceNumber[0] + "C'etais votre "+ tentative + " em tentatives";
+                tentative = tentative + 1;
+            }
+       }
+        else if (paragraphSelector1.value > chiffreAleatoir){
+            if (tentative == 1){
+                paragraphSelector2.textContent = choiceNumber[1] + "C'etais votre "+ tentative + " ère tentative";
+                tentative = tentative + 1;
+            }
+            else{
+                paragraphSelector2.textContent = choiceNumber[1] + "C'etais votre "+ tentative + " em tentatives";
+                tentative = tentative + 1;
+            }
+       }
+        else if (paragraphSelector1.value < chiffreAleatoir){
+            if (tentative == 1){
+                paragraphSelector2.textContent = choiceNumber[2] + "C'etais votre "+ tentative + " ère tentative";
+                tentative = tentative + 1;
+            }
+            else{
+                paragraphSelector2.textContent = choiceNumber[2] + "C'etais votre "+ tentative + " em tentatives";
+                tentative = tentative + 1;
+            }
 
-    if (paragraphSelector1.value == chiffreAleatoir){
-        if (tentative == 1){
-            paragraphSelector2.textContent = choiceNumber[0] + "C'etais votre "+ tentative + " ère tentative";
-            tentative = tentative + 1;
-        }
-        else{
-            paragraphSelector2.textContent = choiceNumber[0] + "C'etais votre "+ tentative + " em tentatives";
-            tentative = tentative + 1;
-        }
-   }
-    else if (paragraphSelector1.value > chiffreAleatoir){
-        if (tentative == 1){
-            paragraphSelector2.textContent = choiceNumber[1] + "C'etais votre "+ tentative + " ère tentative";
-            tentative = tentative + 1;
-        }
-        else{
-            paragraphSelector2.textContent = choiceNumber[1] + "C'etais votre "+ tentative + " em tentatives";
-            tentative = tentative + 1;
-        }
-   }
-    else if (paragraphSelector1.value < chiffreAleatoir){
-        if (tentative == 1){
-            paragraphSelector2.textContent = choiceNumber[2] + "C'etais votre "+ tentative + " ère tentative";
-            tentative = tentative + 1;
-        }
-        else{
-            paragraphSelector2.textContent = choiceNumber[2] + "C'etais votre "+ tentative + " em tentatives";
-            tentative = tentative + 1;
-        }
+    }
+
+
    }
 }
 
