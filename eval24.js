@@ -18,20 +18,25 @@
 // Je vous attends dans la prochaine session !
 
 console.log("hello")
-const choiceNumber = ["C'est le juste prix ","C'est moins cher !!","C'est plus cher "];
+const choiceNumber = ["C'est le juste prix ","C'est moins cher !!","C'est plus cher "]; //bonne idée de stocker des info dans un tableau
 
-chiffreAleatoir = Math.floor(Math.random() * 1000);
+let chiffreAleatoir = Math.floor(Math.random() * 1000); //tu oublie de déclarer ta variable
 console.log(chiffreAleatoir);
 
 let butondemarer = document.querySelector(".bouton1");
 let paragraphSelector2 = document.querySelector(".paragraphe2");
 var paragraphSelector1 = document.getElementById("in");
+
 console.log(paragraphSelector1.value);
+
 var tentative = 1;
+
 butondemarer.addEventListener("click", displayMessage);
 
 function displayMessage (){ 
-    if (paragraphSelector1.value > 0 || paragraphSelector1.value < 1000 || isNaN()){
+    /* Plutôt qu'une répétition de paragraphSelector1.value tu peux l'affecter à une variable*/
+    let swapInputValue = paragraphSelector1.value;
+    if (paragraphSelector1.value > 0 || paragraphSelector1.value < 1000 || isNaN()){ //tu doit mettre une valeur dans le isNaN
         paragraphSelector2.textContent = "Entrez un chiffre entre 0 et 1000";
     }
     else{
