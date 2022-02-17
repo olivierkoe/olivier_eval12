@@ -54,7 +54,7 @@ h1 {
 .paragraphe2 {
   font-family: "Satisfy", cursive;
   color: white;
-  background-color: rgba(243, 201, 245, 0.5);
+  background-color: rgba(243, 201, 245, 0);
   width: 50%;
   height: 100px;
   margin-top: 5%;
@@ -66,9 +66,12 @@ h1 {
 }
 .bouton1 {
   font-family: "Satisfy", cursive;
-  background-color: rgba(236, 241, 245, 0.75);
+  background-color: rgba(236, 241, 245, 0);
   font-size: large;
   color: lightpink;
   height: 50px;
   width: 200px;
+}
+input {
+  text-align: center;
 }
