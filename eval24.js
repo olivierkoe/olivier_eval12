@@ -33,7 +33,7 @@ butondemarer.addEventListener("click", displayMessage);//je définis ce qu'il se
 
 // la fonction qui gere le displaymessage
 function displayMessage (){ 
-    if (paragraphSelector1.value < 0 || paragraphSelector1.value > 1000 || paragraphSelector1.value == isNaN()){
+    if (paragraphSelector1.value < 0 || paragraphSelector1.value > 1000 || isNaN(paragraphSelector1.value)){
         paragraphSelector2.textContent = choiceNumber[3];//je definis que ce que le joueur rentre comme information est bien un chiffre et qu'il est bien compris entre 0 et 1000
     }
     else{
